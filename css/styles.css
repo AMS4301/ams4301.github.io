@@ -1,10 +1,154 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+/*common*/
+
 body {
     margin: 0;
-    font-family: Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #22577a;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    min-width: 100%;
+}
+
+/*header*/
+
+header {
+
+    padding: 16px 0;
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    background: #000;
+    /* transition: background-color .3s, box-shadow .3s; */
+    
 }
 
 h1 {
-    font-size: 24px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #ddd;
+    display: block;
+    
+}
+
+h1 > a {
+    color: #22577a;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+h2 {
+    display: inline-block;
+    font-size: 2rem;
+    background: linear-gradient(transparent 50%, #a8eaff 50%);
+    margin-bottom: 48px;
+}
+
+#top-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-content {
+    display: flex;
+}
+
+.top-content li a {
+    display: block;
+    text-decoration: none;
+    width: 160px;
+    background: #22577a;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.top-content li:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+/*container*/
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*main*/
+
+#main-v {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+#main-v img {
+    object-fit: cover;
+    height: 500px;
+}
+
+#menu {
+    text-align: center;
+
+}
+
+.contents > ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.contents > ul > li {
+    display: block;
+    margin-bottom: 32px;
+}
+
+.contents > ul > li img {
+    width: 300px;
+}
+/*footer*/
+
+#footer p {
+    text-align: center;
+}
+
+/*スマホ*/
+@media screen and (max-width: 800px) {
+    header {
+        width: 100%;
+        height: auto;
+    }
+
+    #top-menu {
+        flex-direction: column;
+    
+    }
+
+    .container {
+        width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contents ul {
+        flex-direction: column;
+
+    }
+
+    .contents li {
+        width: 100%;
+        margin-bottom: 32px;
+    }
 }
